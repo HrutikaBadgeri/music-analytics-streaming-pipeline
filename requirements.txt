@@ -1,0 +1,9 @@
+Flask==3.0.0
+kafka-python==2.0.2
+streamlit
+pyspark
+duckdb
+kafka-python
+requests
+altair
+pandas

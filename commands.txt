@@ -1,0 +1,26 @@
+spark-submit \--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.8,org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.5.2 \ store_logs.py
+
+spark-submit --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 user_activity.py  
+
+spark-submit --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 user_daily_summary.py
+
+spark-submit --packages org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 tracks_daily_summary.py
+
+
+--pyspark shell 
+
+pyspark \
+--packages \
+org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.8,\
+org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.5.2 \
+--conf spark.sql.catalog.local=org.apache.iceberg.spark.SparkCatalog \
+--conf spark.sql.catalog.local.type=hadoop \
+--conf spark.sql.catalog.local.warehouse=/Users/hrutika/Downloads/logs/iceberg_warehouse
+
+streamlit run ui/app.py
+
+kafka-server-start /opt/homebrew/etc/kafka/server.properties
+
+hrutika@Hrutikas-MacBook-Pro ~ % kafka-console-consumer \
+  --bootstrap-server localhost:9092 \
+  --topic events

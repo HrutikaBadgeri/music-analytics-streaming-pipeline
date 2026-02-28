@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.log
+*.pyc
+iceberg_warehouse/
+data_lake/
+checkpoints/
+*.db
+.DS_Store

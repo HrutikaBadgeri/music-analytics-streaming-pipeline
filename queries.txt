@@ -1,0 +1,40 @@
+spark.sql("""
+CREATE TABLE local.raw_events (
+    raw_json STRING,
+    kafka_timestamp TIMESTAMP,
+    event_id STRING,
+    event_type STRING,
+    ingestion_time TIMESTAMP,
+    date DATE,
+    processing_time TIMESTAMP,
+    ply TINYINT,
+    skp TINYINT,
+    lik TINYINT,
+    ao TINYINT,
+    ac TINYINT,
+    atp TINYINT
+)
+USING ICEBERG
+PARTITIONED BY (date)
+""")
+
+
+
+spark.sql("""
+CREATE TABLE IF NOT EXISTS local.user_activity (
+    date DATE,
+    event_type STRING,
+    event_id STRING,
+    ply INT,
+    skp INT,
+    lik INT,
+    atp INT,
+    user_id STRING,
+    track_id STRING,
+    session_id STRING,
+    client_time TIMESTAMP
+
+)
+USING ICEBERG
+PARTITIONED BY (date)
+""")
