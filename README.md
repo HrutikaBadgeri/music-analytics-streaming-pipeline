@@ -120,13 +120,9 @@ This project demonstrates several real-world analytics patterns:
 
 
 
-
-
-
-
-
 ## License
 
 MIT License
+
 
 
