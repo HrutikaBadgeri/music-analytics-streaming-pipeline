@@ -14,3 +14,16 @@ Pipeline components:
   4. Iceberg data warehouse storage
   5. DuckDB analytical querying
   6. Streamlit visualization layer
+
+## Tech Stack
+
+| Layer | Technology |
+|------|------------|
+| Event Ingestion | Flask |
+| Streaming | Apache Kafka |
+| Stream Processing | Apache Spark Structured Streaming |
+| Data Lakehouse | Apache Iceberg |
+| Analytics Engine | DuckDB |
+| Visualization | Streamlit |
+| Language | Python |
+
