@@ -103,7 +103,30 @@ This project demonstrates several real-world analytics patterns:
 
 ------------------------------------------------------------------------
 
+### Dashboard Preview
+
+### Platform Activity Overview
+<img width="1728" height="1087" alt="image" src="https://github.com/user-attachments/assets/af30bebb-021c-42b6-a36a-16c8f2abb318" />
+<img width="1728" height="1083" alt="image" src="https://github.com/user-attachments/assets/b69cb8c2-fecd-40b3-a0e0-23848cbf85b1" />
+<img width="1728" height="1086" alt="image" src="https://github.com/user-attachments/assets/193d1756-dc7c-43ae-8f3b-67eed213a548" />
+
+### Music Tracks Overview 
+<img width="1728" height="1081" alt="image" src="https://github.com/user-attachments/assets/85a42d14-bcdd-4b4d-86c5-755ba0593eaa" />
+<img width="1728" height="1076" alt="image" src="https://github.com/user-attachments/assets/d65d7f49-4ffa-4cb6-b196-6697e6abe279" />
+
+### User Behaviour
+<img width="1728" height="1082" alt="image" src="https://github.com/user-attachments/assets/554e18cd-edde-4b12-84c4-f75057025825" />
+<img width="1719" height="1077" alt="image" src="https://github.com/user-attachments/assets/8f556773-dc92-4dc1-81e7-472fece69792" />
+
+
+
+
+
+
+
+
 ## License
 
 MIT License
+
 
