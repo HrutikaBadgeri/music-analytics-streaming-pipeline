@@ -27,3 +27,82 @@ Pipeline components:
 | Visualization | Streamlit |
 | Language | Python |
 
+## Event Data Model
+
+The system simulates typical music platform user events.
+
+### Play Event
+
+``` json
+{
+  "event_type": "play",
+  "client_event_time": "2024-05-20T14:30:05Z",
+  "session_id": "sess-987654",
+  "user_data": {
+    "user_id": "user_101",
+    "country": "US",
+    "subscription_plan": "premium"
+  },
+  "content_data": {
+    "track_id": "track_42",
+    "artist_id": 12,
+    "album_id": 5
+  }
+}
+```
+Other supported events:
+
+-   app_open\
+-   app_close\
+-   play\
+-   skip\
+-   like\
+-   add_to_playlist
+
+# How to Run the Project
+
+## 1. Start Kafka
+
+Ensure Kafka is running locally.
+
+## 2. Start Event Ingestion API
+
+    python event_generation.py
+
+## 3. Run Spark Streaming Jobs
+
+Example:
+
+    spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,org.apache.iceberg:iceberg-spark-runtime-3.5_2.12:1.4.2 raw_events.py
+
+Run additional jobs for:
+
+-   user_activity.py\
+-   track_activity.py
+
+## 4. Generate Synthetic Events
+
+    python simulate_events.py
+
+## 5. Launch Dashboard
+
+    streamlit run ui/app.py
+
+------------------------------------------------------------------------
+
+# Key Analytics Concepts Implemented
+
+This project demonstrates several real-world analytics patterns:
+
+-   Behavioral segmentation\
+-   Content engagement scoring\
+-   Exploration vs repeat listening analysis\
+-   Reach vs engagement intelligence\
+-   Streaming event processing\
+-   Lakehouse-based analytics architecture
+
+------------------------------------------------------------------------
+
+## License
+
+MIT License
