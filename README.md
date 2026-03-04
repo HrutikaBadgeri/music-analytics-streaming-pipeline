@@ -94,11 +94,11 @@ Run additional jobs for:
 
 This project demonstrates several real-world analytics patterns:
 
--   Behavioral segmentation\
--   Content engagement scoring\
--   Exploration vs repeat listening analysis\
--   Reach vs engagement intelligence\
--   Streaming event processing\
+-   Behavioral segmentation
+-   Content engagement scoring
+-   Exploration vs repeat listening analysis
+-   Reach vs engagement intelligence
+-   Streaming event processing
 -   Lakehouse-based analytics architecture
 
 ------------------------------------------------------------------------
@@ -106,3 +106,4 @@ This project demonstrates several real-world analytics patterns:
 ## License
 
 MIT License
+
